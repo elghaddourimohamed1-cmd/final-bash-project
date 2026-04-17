@@ -1,3 +1,5 @@
+#this commit is just for make commit
+
 #read -p "student manager " students
 #while true 
 
@@ -5,7 +7,6 @@
 #echo $students >> students.txt
 ## grep	Searching for content inside files	grep "error" access.log
 ##echo "Searching for a student 	grep "student name" students.txt "
-
 
 #read -p "enter a name " name
 read -p "what is your age " age
