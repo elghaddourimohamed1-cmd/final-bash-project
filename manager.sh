@@ -10,7 +10,7 @@
 
 #read -p "enter a name " name
 read -p "what is your age " age
-#read -p "type one of the following options (add student-show-search-exit) " options
+#read -p "type onie of the following options (add student-show-search-exit) " options
 if [ $age -lt 18 ]; then
 	echo "Student is Minor (not saved) "
 else
@@ -23,15 +23,18 @@ else
 		echo $name " - " $age >> students.txt
 	elif [ $options = "show" ]; then
 		cat students.txt
-	
 #	while true
 #	do
 	elif [ $options = search ]; then
 		read -p "type your name to find your age in database " search
 		if grep -i "$search" students.txt; then echo ""
-		elif
+		else
 			echo "Not Found"
 		fi
+#	elif [ $options != "add" "show" "search" "exit" ]; then 
+#	elif [ $options != "add" && $options != "show" && $options != "exit" ]; then
+	elif [[ "$options" != "add" && "$options" != "show" && "$options" != "search" && "$options" != "exit" ]]; then
+		echo "the option you entered is not valid try again "
 	else [ "$options" = "exit" ]
 	#	exit 1
 		break
